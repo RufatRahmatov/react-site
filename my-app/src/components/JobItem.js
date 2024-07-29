@@ -1,4 +1,4 @@
-// src/components/JobItem.js
+
 import React from 'react';
 import './JobItem.scss';
 
