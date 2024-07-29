@@ -1,0 +1,53 @@
+// src/components/JobCard/JobCard.module.scss
+.card {
+  background-color: #2a2d3d;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .header {
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .body {
+    margin-top: 16px;
+
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 4px 0;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .viewProfile {
+      background-color: #3a3f58;
+    }
+
+    .applyNow {
+      background-color: #5469d4;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.jobs-list {
+  background-color: #1a202c;
+  color: #cbd5e0;
+  padding: 20px;
+  border-radius: 8px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h1 {
+      margin: 0;
+    }
+    .add-new-job {
+      background-color: #667eea;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  }
+  .table-responsive {
+    overflow-x: auto;
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #2d3748;
+      }
+      th {
+        background-color: #2d3748;
+      }
+      tbody tr {
+        &:nth-child(even) {
+          background-color: #2a2e37;
+        }
+        &:hover {
+          background-color: #3c4858;
+        }
+      }
+      .badge {
+        padding: 5px 10px;
+        border-radius: 12px;
+        &.fulltime {
+          background-color: #48bb78;
+        }
+        &.parttime {
+          background-color: #f56565;
+        }
+        &.freelance {
+          background-color: #ed8936;
+        }
+        &.internship {
+          background-color: #4299e1;
+        }
+      }
+      .status {
+        &.active {
+          color: #48bb78;
+        }
+        &.new {
+          color: #4299e1;
+        }
+        &.close {
+          color: #f56565;
+        }
+      }
+      .action-icon {
+        margin-right: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}
