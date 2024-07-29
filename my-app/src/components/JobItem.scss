@@ -6,3 +6,17 @@ button {
   cursor: pointer;
   margin-right: 5px;
 }
+
+.view-button {
+  background-color: rgb(17, 16, 122);
+  color: #007bff;
+}
+
+.edit-button {
+  background-color: rgb(11, 126, 107);
+  color: aquamarine;
+}
+.delete-button {
+  background-color: #470505;
+  color: #bd1212;
+}

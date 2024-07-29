@@ -3,10 +3,13 @@ import './Sidebar.scss';
 import {
     BiHomeCircle, BiCalendar, BiChat, BiFolder, BiShoppingBag,
     BiBitcoin, BiEnvelope, BiFile, BiBriefcase, BiTask, BiBookContent,
-    BiUser, BiBriefcaseAlt, BiMenu, BiChevronDown
+    BiUser, BiBriefcaseAlt, BiChevronDown
 } from 'react-icons/bi';
+import { FiMenu } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const [subMenuOpen, setSubMenuOpen] = useState({
         Calendar: false,
         Chat: false,
@@ -22,6 +25,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         Jobs: false,
     });
 
+    const toggleSidebar = () => {
+        setIsOpen(!isOpen);
+    };
+
     const handleSubMenuToggle = (menu, event) => {
         event.stopPropagation();
         setSubMenuOpen((prev) => ({
@@ -36,6 +43,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
     return (
         <>
+            <FiMenu className="menu-icon" onClick={toggleSidebar} />
             <div className={`sidebar ${isOpen ? 'open' : ''}`} onClick={handleMenuItemClick}>
                 <div className="logo">
                     <img src="https://themesbrand.com/skote/layouts/assets/images/logo-dark.png" alt="Logo" />
@@ -92,17 +100,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </a>
                 {subMenuOpen.Jobs && (
                     <div className="sub-menu">
-                        <a href="#" className="sub-menu-item">Job List</a>
-                        <a href="#" className="sub-menu-item">Job Grid</a>
+                        <Link to="/jobs-list" className="sub-menu-item">Job List</Link>
+                        <Link to="/job-list" className="sub-menu-item">Job Grid</Link>
+                        { }
                     </div>
                 )}
             </div>
-            <div
-                className={`overlay ${isOpen ? 'active' : ''}`}
-                onClick={toggleSidebar}
-            ></div>
+
         </>
     );
 };
+
 
 export default Sidebar;

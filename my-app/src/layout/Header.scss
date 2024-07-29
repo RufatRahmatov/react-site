@@ -19,7 +19,9 @@
   background-color: #2a3042;
   color: #fff;
 
-  .header-left,
+  .header-left {
+    left: 40px;
+  }
   .header-center,
   .header-right {
     display: flex;
@@ -46,6 +48,7 @@
     color: #ccc;
     background-color: #2a3042;
     border: none;
+    left: 120px;
   }
   .icon-button {
     background: none;
@@ -66,6 +69,7 @@
   }
   .search--button-began {
     display: flex;
+    margin-left: 15rem;
   }
 
   .search-input {
@@ -181,8 +185,4 @@
   justify-content: center;
   height: 10px;
   width: 10px;
-}
-
-header {
-  pointer-events: none;
 }

@@ -1,10 +1,8 @@
-// src/components/JobModal.js
 import React, { useState } from 'react';
 import './JobModal.scss';
 
 const JobModal = ({ job, onClose, onSave }) => {
     const [formData, setFormData] = useState(job || {
-        id: '',
         title: '',
         companyName: '',
         location: '',
@@ -25,50 +23,56 @@ const JobModal = ({ job, onClose, onSave }) => {
 
     return (
         <div className="job-modal">
-            <form onSubmit={handleSubmit}>
+            <div className="modal-header">
+                {/* <h1>JOBS LISTS</h1> */}
+                <div className="actions">
+                    {/* <button className="refresh-button">↻</button>
+                    <button className="options-button">⋮</button>
+                    <button className="add-button">Add New Job</button> */}
+                </div>
+            </div>
+            <form onSubmit={handleSubmit} className="modal-content">
                 <h2>{job ? 'Edit Job' : 'Add Job'}</h2>
-                <label>
-                    Job Id
-                    <input name="id" value={formData.id} onChange={handleChange} />
-                </label>
-                <label>
-                    Job Title
+                <div className="form-group">
+                    <label>Job Title</label>
                     <input name="title" value={formData.title} onChange={handleChange} />
-                </label>
-                <label>
-                    Company Name
+                </div>
+                <div className="form-group">
+                    <label>Company Name</label>
                     <input name="companyName" value={formData.companyName} onChange={handleChange} />
-                </label>
-                <label>
-                    Location
+                </div>
+                <div className="form-group">
+                    <label>Location</label>
                     <input name="location" value={formData.location} onChange={handleChange} />
-                </label>
-                <label>
-                    Experience
+                </div>
+                <div className="form-group">
+                    <label>Experience</label>
                     <input name="experience" value={formData.experience} onChange={handleChange} />
-                </label>
-                <label>
-                    Position
+                </div>
+                <div className="form-group">
+                    <label>Position</label>
                     <input name="position" value={formData.position} onChange={handleChange} />
-                </label>
-                <label>
-                    Type
+                </div>
+                <div className="form-group">
+                    <label>Type</label>
                     <select name="type" value={formData.type} onChange={handleChange}>
                         <option value="Full Time">Full Time</option>
                         <option value="Part Time">Part Time</option>
                         <option value="Freelance">Freelance</option>
                         <option value="Internship">Internship</option>
                     </select>
-                </label>
-                <label>
-                    Status
+                </div>
+                <div className="form-group">
+                    <label>Status</label>
                     <select name="status" value={formData.status} onChange={handleChange}>
                         <option value="Active">Active</option>
                         <option value="Inactive">Inactive</option>
                     </select>
-                </label>
-                <button type="submit">Save</button>
-                <button type="button" onClick={onClose}>Cancel</button>
+                </div>
+                <div className="form-actions">
+                    <button type="submit">Save</button>
+                    <button type="button" onClick={onClose}>Cancel</button>
+                </div>
             </form>
         </div>
     );

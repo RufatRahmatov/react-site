@@ -1,6 +1,8 @@
-
 import React from 'react';
 import './JobItem.scss';
+import { FaRegEye } from "react-icons/fa";
+import { GoTrash } from "react-icons/go";
+import { CiEdit } from "react-icons/ci";
 
 const JobItem = ({ job, index, onEdit, onDelete }) => {
     return (
@@ -15,8 +17,15 @@ const JobItem = ({ job, index, onEdit, onDelete }) => {
             <td>{job.postedDate}</td>
             <td>{job.status}</td>
             <td>
-                <button onClick={() => onEdit(job)}>Edit</button>
-                <button onClick={() => onDelete(job.id)}>Delete</button>
+                <button onClick={() => (job)} className="icon-button view-button">
+                    <FaRegEye />
+                </button>
+                <button onClick={() => onEdit(job)} className="icon-button edit-button">
+                    <CiEdit />
+                </button>
+                <button onClick={() => onDelete(job.id)} className="icon-button delete-button">
+                    <GoTrash />
+                </button>
             </td>
         </tr>
     );

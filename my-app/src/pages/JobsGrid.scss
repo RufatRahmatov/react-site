@@ -3,4 +3,119 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 16px;
   padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+.job-list {
+  padding: 20px;
+  background: #1f2937;
+  color: #fff;
+
+  .job-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+
+      .refresh-button,
+      .options-button,
+      .add-job-btn {
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .refresh-button {
+        background: #4b5563;
+        color: #fff;
+      }
+
+      .options-button {
+        background: #10b981;
+        color: #fff;
+      }
+
+      .add-job-btn {
+        background: #3b82f6;
+        color: #fff;
+
+        &:hover {
+          background: #2563eb;
+        }
+      }
+    }
+  }
+
+  .filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    select,
+    input {
+      padding: 8px;
+      border: 1px solid #374151;
+      border-radius: 5px;
+      background: #374151;
+      color: #fff;
+      font-size: 14px;
+      margin-right: 10px;
+      height: 36px;
+
+      &:focus {
+        outline: none;
+        border-color: #3b82f6;
+      }
+    }
+
+    select {
+      width: 100px;
+    }
+
+    input {
+      flex: 1;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      font-size: 12px;
+    }
+
+    th {
+      background: #374151;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #2d3748;
+    }
+  }
+}
+
+.JobCard_card__FyLI5 {
+  height: 250px;
+  width: 235px;
+  margin-top: 90px;
+  margin-left: 200px;
+  padding: 10px;
 }

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import JobCard from "../components/JobCard/JobCard";
+import React, { useState, useEffect } from "react";
+import JobCard from "./JobCard";
 import "./JobsGrid.scss";
 
 const JobsGrid = () => {
@@ -9,16 +8,75 @@ const JobsGrid = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("/jobs.json")
-      .then((response) => {
-        setJobs(response.data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setLoading(false);
-      });
+    const exampleJobs = [
+      {
+        id: 1,
+        title: "Frontend Developer",
+        companyName: "Company A",
+        location: "New York",
+        salary: "$80,000 - $100,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+      {
+        id: 2,
+        title: "Backend Developer",
+        companyName: "Company B",
+        location: "San Francisco",
+        salary: "$90,000 - $110,000",
+        companyLogo: "https://via.placeholder.com/100",
+      },
+    ];
+
+    setJobs(exampleJobs);
+    setLoading(false);
   }, []);
 
   if (loading) return <p>Loading...</p>;

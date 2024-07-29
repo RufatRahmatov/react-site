@@ -66,9 +66,9 @@ const Header = () => {
         <>
             <header className="header">
                 <div className="header-left">
-                    <button className="menu-button" onClick={toggleSidebar}>
+                    {/* <button className="menu-button" onClick={toggleSidebar}>
                         <FiMenu />
-                    </button>
+                    </button> */}
                     <div className='search--button-began'>
                         <button className="search-button">
                             <FontAwesomeIcon icon={faSearch} />
@@ -129,7 +129,7 @@ const Header = () => {
                                             <li>Charts</li>
                                         </ul>
                                     </div>
-                                    <img src='https://skote-v-white.react.themesbrand.com/static/media/megamenu-img.8b069df40f2e8fc97bf9.png'></img>
+                                    <img src='https://skote-v-dark.react.themesbrand.com/static/media/megamenu-img.8b069df40f2e8fc97bf9.png'></img>
                                 </div>
                             )}
                         </div>
