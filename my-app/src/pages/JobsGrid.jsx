@@ -1,4 +1,3 @@
-// src/pages/JobsGrid.jsx
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import JobCard from "../components/JobCard/JobCard";
@@ -10,7 +9,6 @@ const JobsGrid = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Local JSON dosyasından veri çekme
     axios
       .get("/jobs.json")
       .then((response) => {

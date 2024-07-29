@@ -1,4 +1,4 @@
-// src/components/JobList.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import JobItem from './JobItem';
@@ -22,14 +22,14 @@ const JobList = () => {
     };
 
     const handleDelete = (jobId) => {
-        // Silme işlemi burada yapılacak
+
     };
 
     const handleSave = (job) => {
         if (currentJob) {
-            // Güncelleme işlemi
+
         } else {
-            // Yeni iş ekleme işlemi
+
         }
         setModalOpen(false);
         setCurrentJob(null);
