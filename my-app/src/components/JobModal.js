@@ -23,14 +23,14 @@ const JobModal = ({ job, onClose, onSave }) => {
 
     return (
         <div className="job-modal">
-            <div className="modal-header">
-                {/* <h1>JOBS LISTS</h1> */}
-                <div className="actions">
-                    {/* <button className="refresh-button">↻</button>
+            {/* <div className="modal-header"> </div> */}
+            {/* <h1>JOBS LISTS</h1> */}
+            <div className="actions">
+                {/* <button className="refresh-button">↻</button>
                     <button className="options-button">⋮</button>
                     <button className="add-button">Add New Job</button> */}
-                </div>
             </div>
+
             <form onSubmit={handleSubmit} className="modal-content">
                 <h2>{job ? 'Edit Job' : 'Add Job'}</h2>
                 <div className="form-group">

@@ -21,37 +21,37 @@
       display: flex;
       align-items: center;
 
-      .refresh-button,
-      .options-button,
-      .add-job-btn {
-        margin-left: 10px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
+      .refresh-button {
+        background-color: #32394e;
       }
 
-      // .refresh-button {
-      //   background: #2a3042;
-      //   color: #fff;
-      // }
-
+      .refresh-button > div {
+        position: relative;
+        left: -5px;
+      }
       .options-button {
         background: #10b981;
         color: #fff;
       }
-
       .add-job-btn {
-        background: #3b82f6;
-        color: #fff;
-
+        margin-left: 10px;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        background: #485ec4;
         &:hover {
-          background: #2563eb;
+          background: #404ada;
+          transition: ease-in-out 0.3s;
         }
       }
     }
   }
+  // .refresh-button {
+  //   background: #2a3042;
+  //   color: #fff;
+  // }
 
   .filter-bar {
     display: flex;

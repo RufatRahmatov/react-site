@@ -11,49 +11,39 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    background: #1f2937;
-    color: #fff;
+  h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
 
-    h1 {
-      font-size: 24px;
-      font-weight: 600;
+  .actions {
+    display: flex;
+    align-items: center;
+
+    .refresh-button,
+    .options-button,
+    .add-button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
     }
 
-    .actions {
-      display: flex;
-      align-items: center;
+    .refresh-button {
+      background: #4b5563;
+      color: #fff;
+    }
 
-      .refresh-button,
-      .options-button,
-      .add-button {
-        margin-left: 10px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-      }
+    .options-button {
+      background: #10b981;
+      color: #fff;
+    }
 
-      .refresh-button {
-        background: #4b5563;
-        color: #fff;
-      }
-
-      .options-button {
-        background: #10b981;
-        color: #fff;
-      }
-
-      .add-button {
-        background: #3b82f6;
-        color: #fff;
-      }
+    .add-button {
+      background: #3b82f6;
+      color: #fff;
     }
   }
 

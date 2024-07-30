@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from './layout/Header';
 import JobsGrid from './pages/JobsGrid';
 import JobList from './components/JobList';
+import Pagination from './components/pagination';
 
 function App() {
   return (
